@@ -4,7 +4,7 @@ servicio realizado usando Falcon python framework,
 ## Instalar requisitos
 `pip install -r requirements.txt`
 
-## Ejecutar servidor de desarrollo de falcon mediante gunicorn
+## Ejecutar servidor (gunicorn) para desplegar el servicio rest.
 `gunicorn api:api`
 
 ## Endpoint para consumir el microServicio (cargar los datos mediante archivo input)
