@@ -13,7 +13,11 @@ class AncestorApi():
             content = filer.file.read().decode('utf-8').split('\n')
             ancestor = AncestorClass()
             ancestor.setItemQuestion(content[0])
-            #Arreglar Error formato
+            if ancestor.setItemQuestion(content[0]) is False:
+            	raise falcon.HTTPBadRequest(
+                    "Error datos archivo input",
+                    "Formato de datos invalidos, verifique."
+                )
 
             ancestor.setRoot(content[1])
             cont = 0

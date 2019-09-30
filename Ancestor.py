@@ -6,7 +6,7 @@ class AncestorClass():
             self.items = int(data[0])
             self.question = int(data[1])
         except:
-            print('Formato de datos invalidos, verifique.')
+            return False
 
     def setRoot(self, root):
         self.root = root
@@ -89,3 +89,4 @@ class AncestorClass():
             if nodo in self.nodos[i]:
                 nodo = i
         return nodo
+
